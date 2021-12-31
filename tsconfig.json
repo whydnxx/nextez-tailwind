@@ -5,6 +5,7 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
+    "strictNullChecks": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -13,8 +14,22 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "~/*": ["./*"]
+    }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "include": [
+    "next-env.d.ts",
+    "env.d.ts",
+    "**/*.d.ts",
+    "**/*.js",
+    "**/*.json",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx"
+  ]
 }
